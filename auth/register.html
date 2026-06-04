@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register | FitFunnel Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="../index.html" class="brand">FitFunnel Pro</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="login.html">Login</a>
+       
+      </nav>
+      <a href="login.html" class="btn btn-secondary">Already a Client?</a>
+    </div>
+  </header>
+  <main class="container auth-shell">
+    <section class="auth-panel">
+      <div class="auth-panel-inner">
+        <span class="eyebrow">Create Account</span>
+        <h1>Start Strong With a Clean Registration Experience</h1>
+        <p>Use this page to collect new client signups before checkout, coaching, or portal access.</p>
+        <ul class="benefit-list">
+          <li>Perfect for fitness programs and coaching offers</li>
+          <li>Easy to split into steps later if you want</li>
+          <li>Works well with both mobile and desktop layouts</li>
+        </ul>
+      </div>
+    </section>
+    <section class="auth-card-wrap">
+      <div class="auth-card">
+        <h2 class="card-title">Register</h2>
+        <p class="card-subtitle">Create your account in a few quick steps.</p>
+        <form id="registerForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="label" for="first-name">First Name</label>
+              <input class="input" id="first-name" type="text" placeholder="First name" />
+            </div>
+            <div class="form-group">
+              <label class="label" for="last-name">Last Name</label>
+              <input class="input" id="last-name" type="text" placeholder="Last name" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="label" for="register-email">Email Address</label>
+            <input class="input" id="register-email" type="email" placeholder="name@example.com" />
+          </div>
+          <div class="form-group">
+            <label class="label" for="register-password">Password</label>
+            <input class="input" id="register-password" type="password" placeholder="Create password" />
+          </div>
+          <div class="form-group">
+            <label class="label" for="confirm-password">Confirm Password</label>
+            <input class="input" id="confirm-password" type="password" placeholder="Confirm password" />
+          </div>
+          <div class="form-links">
+            <label class="helper"><input type="checkbox" /> I agree to the <a href="../terms.html">terms</a> and <a href="../privacy.html">privacy policy</a></label>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Create Account</button>
+        </form>
+        <p class="switch-text" style="margin-top:1.25rem;">Already have an account? <a href="login.html">Login here</a></p>
+        <div class="note">Your account is created in the connected portal and protected with email/password authentication.</div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">© 2026 FitFunnel Pro. All rights reserved.</div></footer>
+  <script src="../assets/js/app.js?v=20260513-1"></script>
+</body>
+</html>

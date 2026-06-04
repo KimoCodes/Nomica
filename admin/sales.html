@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales & Revenue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html" class="active">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Revenue</p>
+        <h3 id="sales-sidebar-title" style="margin:.35rem 0;">No sales yet</h3>
+        <p id="sales-sidebar-copy" class="muted">Orders will roll up here once clients begin buying programs or products.</p>
+        <a href="orders.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Open Orders</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Commerce</p>
+          <h1>Sales & Revenue</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search clients, products, orders...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid4">
+        <article class="card stat"><p class="mini">Gross Revenue</p><h2>$0</h2><span class="muted">All tracked orders</span></article>
+        <article class="card stat"><p class="mini">Average Order</p><h2>$0</h2><span class="muted">Average value across orders</span></article>
+        <article class="card stat"><p class="mini">Product Sales</p><h2>0%</h2><span class="muted">Physical and bundle share</span></article>
+        <article class="card stat"><p class="mini">Lead Conversion</p><h2>0%</h2><span class="muted">Leads that turned into client accounts</span></article>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card table-card">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Payments</p>
+              <h2>Transaction History</h2>
+            </div>
+            <a href="orders.html" class="btn btn-secondary">Fulfillment Queue</a>
+          </div>
+          <table class="table">
+            <thead>
+              <tr><th>Date</th><th>Client</th><th>Product</th><th>Amount</th></tr>
+            </thead>
+            <tbody id="admin-sales-body"></tbody>
+          </table>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Top Sellers</p>
+              <h2>Best Performing Offers</h2>
+            </div>
+          </div>
+          <div id="admin-sales-top-list" class="list"></div>
+        </article>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Breakdown</p>
+              <h2>Revenue by Offer Type</h2>
+            </div>
+          </div>
+          <div id="admin-sales-breakdown" class="list"></div>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Selling Capacity</p>
+              <h2>What The Admin Can Do</h2>
+            </div>
+          </div>
+          <div id="admin-sales-insights" class="list"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book A Coach | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html" class="active">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Booking Focus</p>
+        <h3 style="margin:.35rem 0;">Personalized Remote Training</h3>
+        <p class="muted">Pick a call type, then tell your coach exactly what you want to improve in the next block.</p>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Coach Request</p>
+          <h1>Book A Session</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search time slots or session types...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid2">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Available Slots</p><h2>Select A Time</h2></div></div>
+          <div class="list">
+            <div class="item flex"><div><strong>May 16 • 7:00 PM</strong><div class="muted">Remote plan review • 45 minutes</div></div><a href="#" class="btn btn-primary">Choose</a></div>
+            <div class="item flex"><div><strong>May 18 • 12:30 PM</strong><div class="muted">Form audit • 30 minutes</div></div><a href="#" class="btn btn-primary">Choose</a></div>
+            <div class="item flex"><div><strong>May 20 • 6:15 PM</strong><div class="muted">Sports performance consult • 45 minutes</div></div><a href="#" class="btn btn-primary">Choose</a></div>
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Request Details</p><h2>Plan Brief</h2></div></div>
+          <div class="form">
+            <div><div class="mini" style="margin-bottom:.35rem;">Session Goal</div><select class="select"><option>Remote Training Plan</option><option>Exercise Form Review</option><option>Sports Performance Upgrade</option></select></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Experience Level</div><select class="select"><option>Beginner</option><option>Intermediate</option><option>Advanced</option></select></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Notes For Coach</div><textarea class="textarea">I want a 4-day plan centered on lower-body strength, sprint power, and a realistic recovery setup around work travel.</textarea></div>
+          </div>
+          <div class="actions" style="margin-top:1rem;"><a href="#" class="btn btn-primary">Submit Request</a></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

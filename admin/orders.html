@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders Queue</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html" class="active">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Orders</p>
+        <h3 id="order-sidebar-title" style="margin:.35rem 0;">No orders yet</h3>
+        <p id="order-sidebar-copy" class="muted">Orders placed by clients and manual orders will appear here.</p>
+        <a href="#" id="order-new-button" class="btn btn-primary btn-full" style="margin-top:.8rem;">New Manual Order</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Commerce</p>
+          <h1>Orders Queue</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search orders, clients, receipts...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid4">
+        <article class="card stat">
+          <p class="mini">All Orders</p>
+          <h2>0</h2>
+          <span class="muted">Tracked in the system</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Awaiting Action</p>
+          <h2>0</h2>
+          <span class="muted">Pending fulfillment or payment review</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Packing</p>
+          <h2>0</h2>
+          <span class="muted">Orders currently being prepared</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Delivered</p>
+          <h2>0</h2>
+          <span class="muted">Completed deliveries</span>
+        </article>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card table-card">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Orders</p>
+              <h2>Recent Sales Queue</h2>
+            </div>
+            <a href="#" id="order-add-button" class="btn btn-primary">Create Manual Order</a>
+          </div>
+          <table class="table">
+            <thead>
+              <tr><th>Order ID</th><th>Buyer</th><th>Item</th><th>Total</th><th>Status</th></tr>
+            </thead>
+            <tbody id="admin-orders-body"></tbody>
+          </table>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Fulfillment</p>
+              <h2>Update Order Status</h2>
+            </div>
+          </div>
+          <div class="form two">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Order ID</div>
+              <input id="admin-order-id" class="input" placeholder="#FF-3001">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Buyer Name</div>
+              <input id="admin-order-buyer" class="input" placeholder="Client or buyer name">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Total</div>
+              <input id="admin-order-total" class="input" placeholder="0">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Order Status</div>
+              <select id="admin-order-status" class="select">
+                <option>Pending Payment</option>
+                <option>Paid / Unfulfilled</option>
+                <option>Packing</option>
+                <option>Shipped</option>
+                <option>Delivered</option>
+                <option>Payment Issue</option>
+                <option>Booked</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Delivery Method</div>
+              <select id="admin-order-delivery" class="select">
+                <option>Courier delivery</option>
+                <option>Pickup</option>
+                <option>Digital email</option>
+                <option>Manual fulfillment</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Tracking / Receipt</div>
+              <input id="admin-order-tracking" class="input" placeholder="Tracking code or receipt reference">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Linked Item</div>
+              <select id="admin-order-item" class="select"></select>
+            </div>
+          </div>
+          <div class="form" style="margin-top:.9rem;">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Buyer Notes</div>
+              <textarea id="admin-order-notes" class="textarea" placeholder="Internal notes for payment, delivery, or fulfillment."></textarea>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <a href="#" id="admin-order-save" class="btn btn-primary">Save Update</a>
+            <a href="#" id="admin-order-receipt" class="btn btn-secondary">Mark Receipt Sent</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Action List</p>
+              <h2>What Needs Attention</h2>
+            </div>
+          </div>
+          <div id="admin-order-actions" class="list"></div>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Client Delivery</p>
+              <h2>How Products Reach Buyers</h2>
+            </div>
+          </div>
+          <div id="admin-order-delivery-guide" class="list"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

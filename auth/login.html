@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | FitFunnel Pro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="../index.html" class="brand">FitFunnel Pro</a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="register.html">Register</a>
+       
+      </nav>
+      <a href="register.html" class="btn btn-secondary">Create Account</a>
+    </div>
+  </header>
+  <main class="container auth-shell">
+    <section class="auth-panel">
+      <div class="auth-panel-inner">
+        <span class="eyebrow">Welcome Back</span>
+        <h1>Log In and Continue Your Fitness Journey</h1>
+        <p>Use this page for returning clients to access programs, coaching offers, and their personal portal.</p>
+        <ul class="benefit-list">
+          <li>Email and password login works with the connected portal</li>
+          <li>Role-based access is supported for athletes and admin/coach views</li>
+          <li>Password recovery uses one-time reset codes instead of direct email-only changes</li>
+        </ul>
+      </div>
+    </section>
+    <section class="auth-card-wrap">
+      <div class="auth-card">
+        <h2 class="card-title">Login</h2>
+        <p class="card-subtitle">Enter your account details below.</p>
+        <form id="loginForm">
+          <div class="form-group">
+            <label class="label" for="email" >Email Address</label>
+            <input class="input" id="email" type="email" placeholder="name@example.com" />
+          </div>
+          <div class="form-group">
+            <label class="label" for="password" >Password</label>
+            <input class="input" id="password" type="password" placeholder="Enter your password" />
+          </div>
+          <div class="form-links">
+            <label class="helper"><input id="remember-checkbox" type="checkbox" /> Remember me</label>
+            <a href="password-reset.html">Forgot password?</a>
+          </div>
+          <button class="btn btn-primary btn-full" type="submit">Log In</button>
+        </form>
+        <p class="switch-text" style="margin-top:1.25rem;">Don’t have an account? <a href="register.html">Create one here</a></p>
+        <div class="note">Email/password access is active. Social login can be added later once provider credentials are configured.</div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="container">© 2026 FitFunnel Pro. All rights reserved.</div></footer>
+  
+  <script src="../assets/js/app.js?v=20260513-1"></script>
+</body>
+</html>

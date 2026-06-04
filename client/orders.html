@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orders | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html" class="active">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Client Portal</p>
+          <h1>Orders & Purchases</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search workouts, meals, products...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      
+<section class="grid2">
+  <article class="card table-card">
+    <div class="head"><div><p class="eyebrow">Orders</p><h2>Purchase History</h2></div><a href="store.html" class="btn btn-primary">Shop More</a></div>
+    <table class="table">
+      <thead><tr><th>Order #</th><th>Date</th><th>Item</th><th>Amount</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td colspan="5"><div class="app-empty">Loading your orders...</div></td></tr>
+      </tbody>
+    </table>
+  </article>
+  <article class="card panel order-detail-card">
+    <div class="head"><div><p class="eyebrow">Order Details</p><h2>Select an order</h2></div></div>
+    <div class="order-detail-body">
+      <p class="muted">Click any order row to review items, shipping notes, and quickly reorder your favorites.</p>
+    </div>
+  </article>
+  <article class="card panel">
+    <div class="head"><div><p class="eyebrow">Order Support</p><h2>Need Help?</h2></div></div>
+    <div class="form">
+      <div><div class="mini" style="margin-bottom:.35rem;">Order Question</div><textarea class="textarea">My journal order shows processing — could you confirm shipment timing?</textarea></div>
+    </div>
+    <div class="actions" style="margin-top:1rem;"><a href="messages.html" class="btn btn-primary">Send to Support</a></div>
+  </article>
+</section>
+
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

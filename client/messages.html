@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messages | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html" class="active">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Client Portal</p>
+          <h1>Messages & Support</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search workouts, meals, products...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      
+<section class="grid2">
+  <article class="card table-card">
+    <div class="head"><div><p class="eyebrow">Messages</p><h2>Recent Conversations</h2></div></div>
+    <table class="table">
+      <thead><tr><th>From</th><th>Topic</th><th>Time</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Coach</td><td>Weekly Check-In</td><td>Today</td><td><span class="tag green">Unread</span></td></tr>
+        <tr><td>Support</td><td>Booking Confirmed</td><td>Yesterday</td><td><span class="tag blue">Read</span></td></tr>
+      </tbody>
+    </table>
+  </article>
+  <article class="card panel">
+    <div class="head"><div><p class="eyebrow">New Message</p><h2>Send to Trainer</h2></div></div>
+    <div class="form">
+      <div><div class="mini" style="margin-bottom:.35rem;">Topic</div><input class="input" value="Program Adjustment"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Message</div><textarea class="textarea">Can we slightly reduce cardio and add one extra glute-focused session?</textarea></div>
+    </div>
+    <div class="actions" style="margin-top:1rem;"><a id="client-message-send" href="#" class="btn btn-primary">Send Message</a></div>
+  </article>
+</section>
+
+<section class="grid2" style="margin-top:1rem;">
+  <article class="card panel">
+    <div class="head"><div><p class="eyebrow">Community</p><h2>Share Progress With Coaches Or Friends</h2></div></div>
+    <div class="form">
+      <div><div class="mini" style="margin-bottom:.35rem;">Share With</div><select id="community-audience" class="select"></select></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Update</div><textarea id="community-body" class="textarea" placeholder="Hit a PR, finished a run, or share how the session felt..."></textarea></div>
+    </div>
+    <div class="actions" style="margin-top:1rem;"><a id="community-share-button" href="#" class="btn btn-primary">Share Update</a></div>
+  </article>
+  <article class="card panel">
+    <div class="head"><div><p class="eyebrow">Community Feed</p><h2>Recent Shared Updates</h2></div></div>
+    <div id="community-feed" class="app-community-feed"></div>
+  </article>
+</section>
+
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

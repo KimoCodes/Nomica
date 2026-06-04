@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Coaching Session | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html" class="active">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Coaching Support</p>
+        <h3 style="margin:.35rem 0;">Book Your Next Session</h3>
+        <p class="muted">Select an available slot, describe your goal, and your coach will confirm your session quickly.</p>
+        <a href="bookings.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">View Your Bookings</a>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Book a Session</p>
+          <h1>Schedule Coaching</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search available slots...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid2">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Available Slots</p><h2>Choose a Time</h2></div></div>
+          <div class="list" id="booking-slot-summary">
+            <div class="app-empty">Loading available coaching slots...</div>
+          </div>
+          <div id="booking-selected-detail" class="note" style="margin-top:1rem;">
+            Select a slot to preview its time and session details before submitting.
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Session Request</p><h2>Tell Your Coach</h2></div></div>
+          <div class="form">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Session Goal</div>
+              <select class="select" aria-label="Session Goal">
+                <option>Remote Training Plan</option>
+                <option>Exercise Form Review</option>
+                <option>Sports Performance Upgrade</option>
+                <option>Nutrition Check-In</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Experience Level</div>
+              <select class="select" aria-label="Experience Level">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Notes for Coach</div>
+              <textarea class="textarea" placeholder="Share recent training, recovery, or what you want from this session..."></textarea>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;"><a href="#" class="btn btn-primary">Submit Booking Request</a></div>
+          <div class="note" style="margin-top:1rem;">After booking, your coach will confirm and send details to your Messages inbox.</div>
+        </article>
+      </section>
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel accent-panel">
+          <div class="head"><div><p class="eyebrow">Booking Best Practice</p><h2>Prepare for a Fast Response</h2></div></div>
+          <div class="list">
+            <div class="item"><strong>Clear goal</strong><div class="muted">Describe exactly what outcome you want from the session.</div></div>
+            <div class="item"><strong>Recent training</strong><div class="muted">Add your latest schedule, workload, or any recovery notes.</div></div>
+            <div class="item"><strong>Preferred format</strong><div class="muted">Choose coaching delivery that fits your lifestyle: plan, call, or review.</div></div>
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Next Steps</p><h2>What Happens After Booking</h2></div></div>
+          <div class="list">
+            <div class="item"><strong>Session request</strong><div class="muted">Your coach reviews the slot and confirms in the portal.</div></div>
+            <div class="item"><strong>Message follow-up</strong><div class="muted">Expect a quick note with preparation instructions or session notes.</div></div>
+            <div class="item"><strong>Plan update</strong><div class="muted">If needed, your coach will adjust your plan after the session.</div></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise Library | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html" class="active">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Library Search</p>
+        <h3 style="margin:.35rem 0;">Movement First</h3>
+        <p class="muted">Search by muscle group, equipment, or movement pattern before you start your session.</p>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Video Database</p>
+          <h1>Exercise Library</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search squat, dumbbell, glutes, cable...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid2">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Filters</p><h2>Browse By Category</h2></div></div>
+          <div class="chip-row">
+            <span class="pill active-pill">Strength</span>
+            <span class="pill">Endurance</span>
+            <span class="pill">Speed</span>
+            <span class="pill">Agility</span>
+            <span class="pill">Mobility</span>
+            <span class="pill">Recovery</span>
+            <span class="pill">Sport-Specific Drills</span>
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Form Rule</p><h2>What To Look For</h2></div></div>
+          <p class="muted">Each clip should make setup, tempo, and finish position obvious. Use the short notes to catch the one coaching detail that changes the movement quality the most.</p>
+        </article>
+      </section>
+      <section class="library-grid" style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Lower Body</p><h2>Trap Bar Deadlift</h2></div><span class="tag blue">Barbell</span></div>
+          <div class="video-frame">
+            <video src="../assets/video/shorts/Lower_body_1.mp4" controls preload="metadata"></video>
+          </div>
+          <p class="muted">Drive through the floor, keep the ribs stacked over the pelvis, and finish tall without leaning back.</p>
+          <div class="detail-list"><span>Sets/Reps: 5 x 3</span><span>Duration: 18 min</span><span>Difficulty: Advanced</span><span>Equipment: Trap bar</span><span>Calories: 120</span></div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Recovery</p><h2>Glute Bridge</h2></div><span class="tag green">Bodyweight</span></div>
+          <div class="video-frame video-placeholder">Instructional clip placeholder</div>
+          <p class="muted">Posteriorly tilt first, then squeeze to full hip extension without flaring the ribs.</p>
+          <div class="detail-list"><span>Sets/Reps: 3 x 12</span><span>Duration: 10 min</span><span>Difficulty: Beginner</span><span>Equipment: None</span><span>Calories: 45</span></div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Strength</p><h2>Split Squat</h2></div><span class="tag yellow">Dumbbell</span></div>
+          <div class="video-frame video-placeholder">Instructional clip placeholder</div>
+          <p class="muted">Stay balanced through the front foot and let the back knee drop straight down.</p>
+          <div class="detail-list"><span>Sets/Reps: 3 x 8 / side</span><span>Duration: 14 min</span><span>Difficulty: Intermediate</span><span>Equipment: Dumbbells</span><span>Calories: 80</span></div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Agility / Core</p><h2>Pallof Press</h2></div><span class="tag red">Cable</span></div>
+          <div class="video-frame video-placeholder">Instructional clip placeholder</div>
+          <p class="muted">Exhale as you press out and resist rotation instead of chasing arm speed.</p>
+          <div class="detail-list"><span>Sets/Reps: 3 x 10</span><span>Duration: 8 min</span><span>Difficulty: Intermediate</span><span>Equipment: Cable</span><span>Calories: 35</span></div>
+        </article>
+      </section>
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Strength Systems</p><h2>How Main Lifts Progress</h2></div></div>
+          <div class="list">
+            <div class="item"><strong>1x20 foundation work</strong><div class="muted">Useful for beginners, return-to-training phases, and building joint tolerance before heavier loading.</div></div>
+            <div class="item"><strong>5/3/1 progressions</strong><div class="muted">Best for steady compound-lift strength gains with clear weekly targets on squat, press, hinge, and pull patterns.</div></div>
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Recovery Library</p><h2>Mobility Before Intensity</h2></div></div>
+          <div class="list">
+            <div class="item"><strong>Dynamic warm-ups</strong><div class="muted">Use ankle, hip, thoracic, and trunk prep drills before total-body or sport sessions.</div></div>
+            <div class="item"><strong>Flexibility and cooldowns</strong><div class="muted">Post-session mobility work helps reduce stiffness, improve positions, and lower injury risk over time.</div></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

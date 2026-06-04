@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Client Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html" class="active">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Clients</p>
+        <h3 id="client-sidebar-title" style="margin:.35rem 0;">No clients yet</h3>
+        <p id="client-sidebar-copy" class="muted">Create clients here or let people register themselves, then manage their plan and preferences.</p>
+        <a href="#" id="client-new-button" class="btn btn-primary btn-full" style="margin-top:.8rem;">New Client</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Owner</p>
+          <h1>Client Manager</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search clients, programs, orders...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid2">
+        <article class="card table-card">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Clients</p>
+              <h2>Active Client List</h2>
+            </div>
+            <a href="#" id="client-add-button" class="btn btn-primary">Add Client</a>
+          </div>
+          <table class="table">
+            <thead>
+              <tr><th>Name</th><th>Plan</th><th>Last Activity</th><th>Status</th></tr>
+            </thead>
+            <tbody id="admin-clients-body"></tbody>
+          </table>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Client Editor</p>
+              <h2>Client Details</h2>
+            </div>
+          </div>
+          <input type="hidden" id="admin-client-id">
+          <div class="form two">
+            <div><div class="mini" style="margin-bottom:.35rem;">First Name</div><input id="admin-client-first-name" class="input" placeholder="First name"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Last Name</div><input id="admin-client-last-name" class="input" placeholder="Last name"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Email</div><input id="admin-client-email" class="input" placeholder="client@example.com"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Phone</div><input id="admin-client-phone" class="input" placeholder="+250..."></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Plan</div><input id="admin-client-plan" class="input" placeholder="Assigned plan or coaching offer"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Progress Score</div><input id="admin-client-progress" class="input" placeholder="0-100"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Height (cm)</div><input id="admin-client-height" class="input" placeholder="178"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Weight (kg)</div><input id="admin-client-weight" class="input" placeholder="74"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Sports Position</div><input id="admin-client-position" class="input" placeholder="Forward, Sprinter, Midfielder"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Training History</div><input id="admin-client-history" class="input" placeholder="2 years lifting, offseason training"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Workout Location</div><select id="admin-client-workout-location" class="select"><option>Mixed</option><option>Gym</option><option>Home</option></select></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Preferred Contact</div><select id="admin-client-contact" class="select"><option>Email</option><option>Portal Message</option><option>Text Message</option><option>Phone Call</option></select></div>
+          </div>
+          <div class="form" style="margin-top:.9rem;">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Profile Photo</div>
+              <input id="admin-client-avatar-input" class="input" type="file" accept="image/*">
+              <div id="admin-client-avatar-preview" class="list" style="margin-top:.75rem;"></div>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Temporary Password</div>
+              <input id="admin-client-password" class="input" placeholder="Required only for new clients or password resets">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Nutrition / Coaching Notes</div>
+              <textarea id="admin-client-food-preferences" class="textarea" placeholder="Store food preferences or admin notes for this client."></textarea>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Achievements</div>
+              <input id="admin-client-achievements" class="input" placeholder="PR squat, race PB, team award">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Fitness Scores</div>
+              <input id="admin-client-fitness-scores" class="input" placeholder="recovery:8.2, speed:7.6, strength:8.8">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Injury Recovery Notes</div>
+              <textarea id="admin-client-injury-notes" class="textarea" placeholder="Return-to-play notes, mobility restrictions, rehab emphasis"></textarea>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Assigned Programs</div>
+              <div id="admin-client-programs" class="list"></div>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <a href="#" id="admin-client-save" class="btn btn-primary">Save Client</a>
+            <a href="#" id="admin-client-clear" class="btn btn-secondary">Clear Form</a>
+          </div>
+          <div id="admin-client-summary" class="note" style="margin-top:1rem;">Select a client to edit their profile, plan, and preferences.</div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

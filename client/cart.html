@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html" class="active">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Client Portal</p>
+          <h1>My Cart</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search workouts, meals, products...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      
+<section class="grid2">
+  <article class="card table-card">
+    <div class="head"><div><p class="eyebrow">Cart</p><h2>Selected Products</h2></div></div>
+    <table class="table">
+      <thead><tr><th>Product</th><th>Qty</th><th>Price</th><th>Total</th></tr></thead>
+      <tbody>
+        <tr><td colspan="4"><div class="app-empty">Loading cart items...</div></td></tr>
+      </tbody>
+    </table>
+  </article>
+  <article class="card panel">
+    <div class="head"><div><p class="eyebrow">Order Summary</p><h2>Your Request</h2></div></div>
+    <div class="list">
+      <div class="item"><div class="between"><strong>Subtotal</strong><span>$42</span></div></div>
+      <div class="item"><div class="between"><strong>Shipping</strong><span>$5</span></div></div>
+      <div class="item"><div class="between"><strong>Total</strong><span>$47</span></div></div>
+    </div>
+    <div class="actions" style="margin-top:1rem;"><button type="button" class="btn btn-primary">Submit Order Request</button></div>
+    <div class="note" style="margin-top:1rem;">Submitting saves your order request. Payment is not collected until a secure checkout provider or manual payment process is connected.</div>
+  </article>
+</section>
+
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

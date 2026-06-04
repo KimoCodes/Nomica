@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workout Plans & Programs | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html" class="active">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Plan Filters</p>
+        <h3 style="margin:.35rem 0;">Train With Intent</h3>
+        <p class="muted">Use goals, level, and equipment tags to land on a routine that fits your actual schedule.</p>
+        <a href="program-detail.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Preview Active Plan</a>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Training Catalog</p>
+          <h1>Workout Plans & Programs</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search by goal, split, equipment...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid2">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Personalization Engine</p><h2>Build Your Own Workout</h2></div></div>
+          <div class="form two">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Goal</div>
+              <select id="workout-builder-goal" class="select">
+                <option>Strength</option>
+                <option>Fat Loss</option>
+                <option>Hypertrophy</option>
+                <option>Sports Performance</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Time Available</div>
+              <input id="workout-builder-duration" class="input" type="number" min="10" max="180" value="45">
+            </div>
+          </div>
+          <div class="form" style="margin-top:1rem;">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Equipment Available</div>
+              <div id="workout-builder-equipment" class="app-check-grid"></div>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Focus Notes</div>
+              <textarea id="workout-builder-focus" class="textarea" placeholder="Optional: lower body emphasis, low-impact cardio, short on time..."></textarea>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <button type="button" id="workout-builder-save" class="btn btn-primary">Build Workout</button>
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Builder Summary</p><h2>Recommended Session</h2></div><a href="program-detail.html" class="btn btn-primary">Open Workout</a></div>
+          <div id="builder-summary"></div>
+        </article>
+      </section>
+      <section class="grid2" style="margin-top:1rem;">
+        <article id="wod-card" class="card panel"></article>
+        <article id="subscription-gate" class="card panel"></article>
+      </section>
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Search & Filter</p><h2>Find The Right Routine Fast</h2></div></div>
+          <div class="app-filter-grid">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Time</div>
+              <select id="program-filter-time" class="select">
+                <option>All</option>
+                <option value="30">30</option>
+                <option value="45">45</option>
+                <option value="60+">60+</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Equipment</div>
+              <select id="program-filter-equipment" class="select">
+                <option>All</option>
+                <option>Gym</option>
+                <option>Home</option>
+                <option>Track</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Target Area</div>
+              <select id="program-filter-target" class="select">
+                <option>All</option>
+                <option>Full Body</option>
+                <option>Upper Body</option>
+                <option>Lower Body</option>
+                <option>Athletic Performance</option>
+              </select>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <button type="button" id="program-favorites-toggle" class="btn btn-secondary btn-full">Show Favorites Only</button>
+          </div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Offline Access</p><h2>Gym-Friendly Download</h2></div><a href="../api/workout-pdf.php" class="btn btn-secondary">Download PDF</a></div>
+          <p class="muted">Download the current workout as a PDF before heading to the gym, then open the progress tracker to log sets, reps, volume, and RPE from your phone.</p>
+        </article>
+      </section>
+      <section id="program-library" class="program-grid" style="margin-top:1rem;">
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
