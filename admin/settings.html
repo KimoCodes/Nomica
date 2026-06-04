@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business Settings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html" class="active">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Business Setup</p>
+        <h3 id="settings-sidebar-title" style="margin:.35rem 0;">Configure your brand</h3>
+        <p id="settings-sidebar-copy" class="muted">Set the public business details used across the site and footer.</p>
+        <a href="../index.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Open Website</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Owner</p>
+          <h1>Business Settings</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search settings, brand, selling rules...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid2">
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Business Settings</p>
+              <h2>Brand & Contact</h2>
+            </div>
+          </div>
+          <div class="form two">
+            <div><div class="mini" style="margin-bottom:.35rem;">Brand Name</div><input id="admin-settings-brand" class="input" placeholder="Business name"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Business Email</div><input id="admin-settings-email" class="input" placeholder="hello@yourbrand.com"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Phone</div><input id="admin-settings-phone" class="input" placeholder="+250..."></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Instagram Label</div><input id="admin-settings-instagram-label" class="input" placeholder="@yourhandle"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Instagram URL</div><input id="admin-settings-instagram-url" class="input" placeholder="https://instagram.com/yourhandle"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">TikTok Label</div><input id="admin-settings-tiktok-label" class="input" placeholder="@yourhandle"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">TikTok URL</div><input id="admin-settings-tiktok-url" class="input" placeholder="https://tiktok.com/@yourhandle"></div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <a href="#" id="admin-settings-save" class="btn btn-primary">Save Settings</a>
+          </div>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Owner Notes</p>
+              <h2>Admin Permissions</h2>
+            </div>
+          </div>
+          <div id="admin-settings-note" class="note">These settings feed the public-facing footer, business identity, and key contact details.</div>
+          <div id="admin-settings-summary" class="list" style="margin-top:1rem;"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

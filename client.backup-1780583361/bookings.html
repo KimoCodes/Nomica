@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching & Booking | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html" class="active">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Coach Access</p>
+        <h3 style="margin:.35rem 0;">Personalized Support</h3>
+        <p class="muted">Use remote plan updates, form reviews, and live calls to stay accountable without training alone.</p>
+        <a href="book-session.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Book A Coach</a>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Support Center</p>
+          <h1>Coaching & Booking Panel</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search coaches, sessions, plan types...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid3">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Service</p><h2>Remote Coaching</h2></div><span class="tag green">Popular</span></div>
+          <p class="muted">Weekly plan updates, movement review, progress monitoring, and direct message support.</p>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Service</p><h2>Live Form Review</h2></div><span class="tag blue">30 Min</span></div>
+          <p class="muted">Upload clips or join a video call for exercise feedback and immediate cueing.</p>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Service</p><h2>Sports Consult</h2></div><span class="tag yellow">Athletes</span></div>
+          <p class="muted">Get sprint, jump, and return-to-play direction built around your sport calendar.</p>
+        </article>
+      </section>
+      <section class="content" style="margin-top:1rem;">
+        <div class="grid2">
+          <article class="card table-card">
+            <div class="head"><div><p class="eyebrow">Upcoming Sessions</p><h2>Booked Calls</h2></div><a href="book-session.html" class="btn btn-primary">Schedule New</a></div>
+            <table class="table">
+              <thead><tr><th>Session</th><th>Date</th><th>Format</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Remote Plan Review</td><td>May 16 • 7:00 PM</td><td>Video Call</td><td><span class="tag green">Confirmed</span></td></tr>
+                <tr><td>Form Audit</td><td>May 19 • 1:30 PM</td><td>Video + Upload</td><td><span class="tag blue">Booked</span></td></tr>
+                <tr><td>Sports Performance Consult</td><td>May 23 • 6:00 PM</td><td>Video Call</td><td><span class="tag yellow">Prep Needed</span></td></tr>
+              </tbody>
+            </table>
+          </article>
+          <article class="card panel">
+            <div class="head"><div><p class="eyebrow">Personalized Plans</p><h2>How Remote Coaching Works</h2></div></div>
+            <div class="timeline">
+              <div class="timeline-item"><strong>1. Intake</strong><span class="muted">Share goals, injuries, equipment, and weekly availability.</span></div>
+              <div class="timeline-item"><strong>2. Program Build</strong><span class="muted">Your coach writes a plan tied to your target outcome.</span></div>
+              <div class="timeline-item"><strong>3. Weekly Review</strong><span class="muted">Loads, videos, and recovery notes shape the next block.</span></div>
+              <div class="timeline-item"><strong>4. Ongoing Messaging</strong><span class="muted">Questions and form checks stay inside the client portal.</span></div>
+            </div>
+          </article>
+          <article class="card panel">
+            <div class="head"><div><p class="eyebrow">Coach Roster</p><h2>Who You Can Hire</h2></div></div>
+            <div class="list">
+              <div class="item flex"><div><strong>Strength Coach Maya</strong><div class="muted">Barbell progression, hypertrophy planning, movement regressions.</div></div><span class="tag red">Elite</span></div>
+              <div class="item flex"><div><strong>Coach Idris</strong><div class="muted">Fat loss systems, consistency coaching, habit architecture.</div></div><span class="tag green">Lifestyle</span></div>
+              <div class="item flex"><div><strong>Performance Coach Ayo</strong><div class="muted">Sprint mechanics, agility, explosive lower-body power.</div></div><span class="tag yellow">Athlete</span></div>
+            </div>
+          </article>
+          <article class="card panel">
+            <div class="head"><div><p class="eyebrow">Before You Book</p><h2>What To Prepare</h2></div></div>
+            <div class="list">
+              <div class="item"><strong>Training history</strong><div class="muted">Share what's working and what feels stale.</div></div>
+              <div class="item"><strong>Recent videos</strong><div class="muted">Bring one lift or sprint clip for faster feedback.</div></div>
+              <div class="item"><strong>Target outcome</strong><div class="muted">Be specific: body composition, total strength, or game-speed output.</div></div>
+            </div>
+          </article>
+        </div>
+        <aside class="stack">
+          <article class="card panel accent-panel">
+            <div class="head"><div><p class="eyebrow">Fastest Path</p><h2>Need A Plan Update?</h2></div></div>
+            <p class="muted">Book the remote coaching review if you want a personalized training block without starting from scratch.</p>
+            <a href="book-session.html" class="btn btn-primary" style="margin-top:1rem;">Request Update</a>
+          </article>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress Tracker & Calculators | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html" class="active">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Track Weekly</p>
+        <h3 style="margin:.35rem 0;">Measure What Matters</h3>
+        <p class="muted">Keep your log lean: performance, body metrics, and one note on recovery or energy.</p>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Monitoring Tools</p>
+          <h1>Progress Tracker & Calculators</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search metrics, logs, calculators...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid2">
+        <article id="progress-history" class="card panel"></article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Workout Logbook</p><h2>Training Summary</h2></div></div>
+          <div id="workout-log-summary"></div>
+        </article>
+      </section>
+      <section class="content" style="margin-top:1rem;">
+        <div class="grid2">
+          <article id="progress-checkin-form" class="card panel">
+            <div class="head"><div><p class="eyebrow">Check-In Form</p><h2>Log Today's Update</h2></div></div>
+            <div class="form two">
+              <div><div class="mini" style="margin-bottom:.35rem;">Current Weight</div><input class="input" placeholder="64.1 kg"></div>
+              <div><div class="mini" style="margin-bottom:.35rem;">Waist / Metric</div><input class="input" placeholder="74 cm"></div>
+            </div>
+            <div class="form" style="margin-top:.9rem;">
+              <div><div class="mini" style="margin-bottom:.35rem;">Performance Notes</div><textarea class="textarea" placeholder="Energy, recovery, top set notes, or technique feedback..."></textarea></div>
+            </div>
+            <div class="form" style="margin-top:.9rem;">
+              <div><div class="mini" style="margin-bottom:.35rem;">Progress Photos / Videos</div><input id="client-progress-media-input" class="input" type="file" accept="image/*,video/*" multiple></div>
+              <div id="client-progress-media-preview" class="list"></div>
+            </div>
+            <div class="actions" style="margin-top:1rem;"><a id="progress-checkin-save" href="#" class="btn btn-primary">Save Check-In</a></div>
+          </article>
+          <article class="card panel">
+            <div class="head"><div><p class="eyebrow">Timers & RPE</p><h2>Interactive Tools</h2></div></div>
+            <div class="app-workout-tools">
+              <div class="metric-card"><span class="mini">Workout Timer</span><strong id="workout-timer-display" class="app-timer-display">00:00</strong><span class="muted">Use this for HIIT intervals or rest periods.</span></div>
+              <div class="list">
+                <a id="start-interval-timer" href="#" class="btn btn-primary">Start 20:00 HIIT</a>
+                <a id="start-rest-timer" href="#" class="btn btn-secondary">Start 1:30 Rest</a>
+                <a id="stop-workout-timer" href="#" class="btn btn-secondary">Stop Timer</a>
+              </div>
+            </div>
+            <div class="note" style="margin-top:1rem;">Log your top work sets at RPE 7 to 9 unless the coach says otherwise. Volume is calculated automatically from sets x reps x load.</div>
+          </article>
+        </div>
+        <aside class="stack">
+          <article class="card panel accent-panel">
+            <div class="head"><div><p class="eyebrow">Daily Logbook</p><h2>Sets, Reps, Volume</h2></div></div>
+            <div class="form two">
+              <div><div class="mini" style="margin-bottom:.35rem;">Date</div><input id="workout-log-date" class="input" type="date"></div>
+              <div><div class="mini" style="margin-bottom:.35rem;">Exercise</div><input id="workout-log-exercise" class="input" placeholder="Trap bar deadlift"></div>
+            </div>
+            <div class="form two" style="margin-top:.9rem;">
+              <div><div class="mini" style="margin-bottom:.35rem;">Sets</div><input id="workout-log-sets" class="input" type="number" min="0" step="1"></div>
+              <div><div class="mini" style="margin-bottom:.35rem;">Reps</div><input id="workout-log-reps" class="input" type="number" min="0" step="1"></div>
+            </div>
+            <div class="form two" style="margin-top:.9rem;">
+              <div><div class="mini" style="margin-bottom:.35rem;">Load</div><input id="workout-log-load" class="input" type="number" min="0" step="0.5" placeholder="kg"></div>
+              <div><div class="mini" style="margin-bottom:.35rem;">RPE</div><input id="workout-log-rpe" class="input" type="number" min="0" max="10" step="0.5"></div>
+            </div>
+            <div class="form two" style="margin-top:.9rem;">
+              <div><div class="mini" style="margin-bottom:.35rem;">Duration Seconds</div><input id="workout-log-duration" class="input" type="number" min="0" step="1"></div>
+              <div><div class="mini" style="margin-bottom:.35rem;">Distance</div><input id="workout-log-distance" class="input" type="number" min="0" step="0.1" placeholder="km or miles"></div>
+            </div>
+            <div class="form two" style="margin-top:.9rem;">
+              <div><div class="mini" style="margin-bottom:.35rem;">Heart Rate</div><input id="workout-log-heart-rate" class="input" type="number" min="0" step="1" placeholder="bpm"></div>
+              <div><div class="mini" style="margin-bottom:.35rem;">Notes</div><input id="workout-log-notes" class="input" placeholder="Felt strong on top set"></div>
+            </div>
+            <div class="actions" style="margin-top:1rem;"><a id="workout-log-save" href="#" class="btn btn-primary">Save Workout Log</a></div>
+          </article>
+          <article class="card panel">
+            <div class="head"><div><p class="eyebrow">Log History</p><h2>Recent Training Entries</h2></div></div>
+            <table class="table">
+              <thead>
+                <tr><th>Date</th><th>Exercise</th><th>Sets x Reps</th><th>Load</th><th>Time</th><th>Distance</th><th>HR</th><th>Calories</th></tr>
+              </thead>
+              <tbody id="workout-log-body"></tbody>
+            </table>
+          </article>
+        </aside>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

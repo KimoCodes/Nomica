@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programs Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html" class="active">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Programs</p>
+        <h3 id="program-sidebar-title" style="margin:.35rem 0;">No programs yet</h3>
+        <p id="program-sidebar-copy" class="muted">Create your first program to start assigning offers to clients.</p>
+        <button type="button" id="program-new-button" class="btn btn-primary btn-full" style="margin-top:.8rem;">New Program</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Owner</p>
+          <h1>Programs Manager</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search clients, programs, products...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid2">
+        <article class="card table-card">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Programs</p>
+              <h2>Offer Library</h2>
+            </div>
+            <button type="button" id="program-add-button" class="btn btn-primary">Add Program</button>
+          </div>
+          <div class="form" style="grid-template-columns:repeat(2,1fr);margin-top:1rem;">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Type</div>
+              <select id="admin-program-filter-type" class="select">
+                <option value="All">All</option>
+                <option>Digital</option>
+                <option>Service</option>
+                <option>Upsell</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Status</div>
+              <select id="admin-program-filter-status" class="select">
+                <option value="All">All</option>
+                <option>Active</option>
+                <option>Featured</option>
+                <option>Draft</option>
+              </select>
+            </div>
+          </div>
+          <table class="table">
+            <thead>
+              <tr><th>Program</th><th>Price</th><th>Type</th><th>Status</th></tr>
+            </thead>
+            <tbody id="admin-programs-body"></tbody>
+          </table>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Edit Program</p>
+              <h2>Program Details</h2>
+            </div>
+          </div>
+          <input type="hidden" id="admin-program-id">
+          <div class="form two">
+            <div><div class="mini" style="margin-bottom:.35rem;">Program Name</div><input id="admin-program-name" class="input" placeholder="Program or service name"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Price</div><input id="admin-program-price" class="input" placeholder="0"></div>
+          </div>
+          <div class="form" style="margin-top:.9rem;">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Type</div>
+              <select id="admin-program-type" class="select"><option>Digital</option><option>Service</option><option>Upsell</option></select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Status</div>
+              <select id="admin-program-status" class="select"><option>Active</option><option>Featured</option><option>Draft</option></select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Short Description</div>
+              <textarea id="admin-program-description" class="textarea" placeholder="What does this program include?"></textarea>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Cover Media</div>
+              <input id="admin-program-media-input" class="input" type="file" accept="image/*,video/*">
+              <div id="admin-program-media-preview" class="list" style="margin-top:.75rem;"></div>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <button type="button" id="admin-program-save" class="btn btn-primary">Save Program</button>
+            <button type="button" id="admin-program-duplicate" class="btn btn-secondary">Duplicate</button>
+          </div>
+          <div id="admin-program-note" class="note" style="margin-top:1rem;">Select a program to edit it, or create a new one from scratch.</div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

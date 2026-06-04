@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html" class="active">Homepage</a>
+        <a href="programs.html">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Get Started</p>
+        <h3 style="margin:.35rem 0;">Train With A Plan</h3>
+        <p class="muted">Begin with today's session, save your notes, then book a coach review if you need feedback.</p>
+        <a href="program-detail.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Start Today's Workout</a>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Training Hub</p>
+          <h1>Homepage</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search plans, exercises, calculators...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <!-- Simplified homepage: hero, quick actions, and compact stats -->
+      <section class="hero-banner">
+        <div class="hero-copy">
+          <p class="eyebrow">Daily Focus</p>
+          <h2>Build strength and stay coached from one place.</h2>
+          <p class="muted">Pick a goal, start a program, and track your progress — streamlined for focus.</p>
+          <div class="actions">
+            <a href="programs.html" class="btn btn-primary">Browse Programs</a>
+            <a href="bookings.html" class="btn btn-secondary">Hire A Coach</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem; gap:1rem;">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Quick Actions</p><h2>Get Moving</h2></div></div>
+          <div class="list">
+            <a class="item" href="programs.html"><strong>Browse Programs</strong><div class="muted">Find plans by goal and level.</div></a>
+            <a class="item" href="program-detail.html"><strong>Resume Workout</strong><div class="muted">Jump back into your current session.</div></a>
+            <a class="item" href="exercise-library.html"><strong>Exercise Library</strong><div class="muted">Quick access to technique videos.</div></a>
+            <a class="item" href="book-session.html"><strong>Book a Coach</strong><div class="muted">Request feedback or a plan review.</div></a>
+          </div>
+        </article>
+
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Summary</p><h2>Your Stats</h2></div></div>
+          <div class="metric-grid" style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <div class="metric-card" style="flex:1 1 45%;"><span class="mini">Sessions</span><strong>0</strong></div>
+            <div class="metric-card" style="flex:1 1 45%;"><span class="mini">Tracked Workouts</span><strong>0</strong></div>
+            <div class="metric-card" style="flex:1 1 45%;"><span class="mini">Upcoming Session</span><strong>None</strong></div>
+            <div class="metric-card" style="flex:1 1 45%;"><span class="mini">Progress</span><strong>—</strong></div>
+          </div>
+        </article>
+      </section>
+
+      <section style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Resources</p><h2>Core Pages</h2></div></div>
+          <div class="feature-grid" style="display:flex;gap:1rem;flex-wrap:wrap;">
+            <a class="item feature-link" href="programs.html" style="flex:1 1 45%;"><strong>Programs</strong><div class="muted">Pick a plan and start training.</div></a>
+            <a class="item feature-link" href="exercise-library.html" style="flex:1 1 45%;"><strong>Exercise Library</strong><div class="muted">Quick form cue videos.</div></a>
+            <a class="item feature-link" href="bookings.html" style="flex:1 1 45%;"><strong>Coaching</strong><div class="muted">Book or message your coach.</div></a>
+            <a class="item feature-link" href="progress.html" style="flex:1 1 45%;"><strong>Progress Tracker</strong><div class="muted">View logs and PRs.</div></a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Program Detail | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav">
+        <a href="index.html">Homepage</a>
+        <a href="programs.html" class="active">Workout Plans</a>
+        <a href="exercise-library.html">Exercise Library</a>
+        <a href="sports-performance.html">Sports Performance</a>
+        <a href="bookings.html">Coaching</a>
+        <a href="progress.html">Progress Tracker</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="store.html">Store</a>
+        <a href="cart.html">Cart</a>
+        <a href="orders.html">Orders</a>
+        <a href="messages.html">Messages</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Active Plan</p>
+        <h3 style="margin:.35rem 0;">Lean Muscle Phase</h3>
+        <p class="muted">4 sessions this week with one optional conditioning finish.</p>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Program View</p>
+          <h1>Workout Plan Detail</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search exercises or workout blocks...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      <section class="grid2">
+        <article id="program-detail-overview" class="card panel"></article>
+        <article id="program-detail-meta" class="card panel"></article>
+      </section>
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel">
+          <div id="program-detail-hero" class="hero-product"></div>
+        </article>
+        <article class="card panel">
+          <div class="head"><div><p class="eyebrow">Offline Access</p><h2>Take It With You</h2></div></div>
+          <p class="muted">Download this workout as a PDF for offline use, or jump into the tracker to record sets, rest periods, and RPE during the session.</p>
+          <div class="actions" style="margin-top:1rem;">
+            <a id="program-detail-pdf" href="../api/workout-pdf.php" class="btn btn-secondary">Download PDF</a>
+            <a href="progress.html" class="btn btn-primary">Log Results</a>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

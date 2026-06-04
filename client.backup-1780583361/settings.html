@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings | FitFunnel Client</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Client</span></div>
+      <nav class="nav"><a href="index.html" class="">Dashboard</a><a href="programs.html" class="">My Programs</a><a href="progress.html" class="">Progress</a><a href="bookings.html" class="">Bookings</a><a href="nutrition.html" class="">Nutrition</a><a href="messages.html" class="">Messages</a><a href="store.html" class="">Store</a><a href="orders.html" class="">Orders</a><a href="settings.html" class="active">Settings</a></nav>
+      <div class="sidebar-card">
+        <p class="mini">Current Plan</p>
+        <h3 style="margin:.35rem 0;">VIP Coaching</h3>
+        <p class="muted">Next check-in: Friday, 7:00 PM</p>
+        <a href="bookings.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Book Session</a>
+      </div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Client Portal</p>
+          <h1>Account Settings</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search workouts, meals, products...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+      
+<section class="grid2">
+  <article id="account-profile-panel" class="card panel">
+    <div class="head"><div><p class="eyebrow">Profile Settings</p><h2>Account Details</h2></div></div>
+    <div class="form" style="margin-bottom:.9rem;">
+      <div><div class="mini" style="margin-bottom:.35rem;">Profile Photo</div><input id="client-avatar-input" class="input" type="file" accept="image/*"></div>
+      <div id="client-avatar-preview" class="list"></div>
+    </div>
+    <div class="form two">
+      <div><div class="mini" style="margin-bottom:.35rem;">First Name</div><input id="client-first-name" class="input"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Last Name</div><input id="client-last-name" class="input"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Email</div><input id="client-email" class="input"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Phone</div><input id="client-phone" class="input"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Height (cm)</div><input id="client-height-cm" class="input"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Current Weight (kg)</div><input id="client-current-weight" class="input"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Sports Position</div><input id="client-sports-position" class="input" placeholder="Guard, Sprinter, Midfielder..."></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Training History</div><input id="client-training-history" class="input" placeholder="3 years lifting, offseason basketball..."></div>
+    </div>
+    <div class="form" style="margin-top:.9rem;">
+      <div><div class="mini" style="margin-bottom:.35rem;">Achievements</div><input id="client-achievements" class="input" placeholder="PR deadlift, race PB, team captain"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Fitness Scores</div><input id="client-fitness-scores" class="input" placeholder="recovery:8.2, speed:7.4, strength:8.6, mobility:7.8"></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Injury / Recovery Notes</div><textarea id="client-injury-notes" class="textarea" placeholder="Patellar tendon management, ankle mobility, return-to-run notes..."></textarea></div>
+    </div>
+    <div class="actions" style="margin-top:1rem;"><a id="client-save-profile" href="#" class="btn btn-primary">Save Profile</a></div>
+  </article>
+  <article id="account-preferences-panel" class="card panel">
+    <div class="head"><div><p class="eyebrow">Preferences</p><h2>Portal Preferences</h2></div></div>
+    <div class="form">
+      <div><div class="mini" style="margin-bottom:.35rem;">Workout Location</div><select id="client-workout-location" class="select"><option>Gym</option><option>Home</option><option>Mixed</option></select></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Preferred Contact</div><select id="client-preferred-contact" class="select"><option>Email</option><option>Text Message</option><option>Portal Message</option></select></div>
+    </div>
+    <div class="actions" style="margin-top:1rem;"><a id="client-save-preferences" href="#" class="btn btn-primary">Save Preferences</a></div>
+  </article>
+</section>
+
+<section class="grid2" style="margin-top:1rem;">
+  <article id="account-subscription-panel" class="card panel">
+    <div class="head"><div><p class="eyebrow">Subscription & Access</p><h2>Premium Training Controls</h2></div></div>
+    <div class="form">
+      <div><div class="mini" style="margin-bottom:.35rem;">Subscription Tier</div><select id="client-subscription-tier" class="select" disabled><option>Starter</option><option>Plus</option><option>Elite</option></select></div>
+      <div><div class="mini" style="margin-bottom:.35rem;">Connections</div><input id="client-connections" class="input" placeholder="Coach Noella, Training Friend, Running Group"></div>
+    </div>
+    <div class="note" style="margin-top:1rem;">Favorites, saved progress, and premium training access live here. Subscription tier is coach-managed. Separate connection names with commas.</div>
+    <div class="actions" style="margin-top:1rem;"><a id="client-save-features" href="#" class="btn btn-primary">Save Access & Community</a></div>
+  </article>
+  <article id="account-mobile-panel" class="card panel"></article>
+</section>
+
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

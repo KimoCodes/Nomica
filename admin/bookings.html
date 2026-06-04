@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bookings Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html" class="active">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Bookings</p>
+        <h3 id="booking-sidebar-title" style="margin:.35rem 0;">No sessions yet</h3>
+        <p id="booking-sidebar-copy" class="muted">Create availability slots and manage incoming booking requests here.</p>
+        <a href="#" id="booking-new-slot-button" class="btn btn-primary btn-full" style="margin-top:.8rem;">New Slot</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Owner</p>
+          <h1>Bookings Manager</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search clients, sessions, paid bookings...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid2">
+        <article class="card table-card">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Bookings</p>
+              <h2>Session Requests</h2>
+            </div>
+            <a href="#" id="booking-add-button" class="btn btn-primary">Create Slot</a>
+          </div>
+          <table class="table">
+            <thead>
+              <tr><th>Client / Slot</th><th>Session</th><th>Date</th><th>Status</th></tr>
+            </thead>
+            <tbody id="admin-bookings-body"></tbody>
+          </table>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Scheduler</p>
+              <h2>Availability & Booking Editor</h2>
+            </div>
+          </div>
+          <input type="hidden" id="admin-booking-id">
+          <div class="form two">
+            <div><div class="mini" style="margin-bottom:.35rem;">Date</div><input id="admin-booking-date" class="input" placeholder="May 20, 2026"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Session Type</div><select id="admin-booking-type" class="select"><option>1-on-1 Coaching</option><option>Discovery Call</option><option>Group Session</option></select></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Start Time</div><input id="admin-booking-time" class="input" placeholder="7:00 PM"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Seats</div><input id="admin-booking-seats" class="input" placeholder="1"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Status</div><select id="admin-booking-status" class="select"><option>Pending</option><option>Confirmed</option><option>Booked</option><option>Completed</option><option>Cancelled</option><option>Open</option></select></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Format</div><select id="admin-booking-format" class="select"><option>Video Call</option><option>Phone Call</option><option>In Person</option></select></div>
+          </div>
+          <div class="form" style="margin-top:.9rem;">
+            <div><div class="mini" style="margin-bottom:.35rem;">Goal</div><input id="admin-booking-goal" class="input" placeholder="Goal for the session or reason for booking"></div>
+            <div><div class="mini" style="margin-bottom:.35rem;">Notes</div><textarea id="admin-booking-notes" class="textarea" placeholder="Internal notes or client notes."></textarea></div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <a href="#" id="admin-booking-save" class="btn btn-primary">Save Slot</a>
+            <a href="#" id="admin-booking-clear" class="btn btn-secondary">Clear Form</a>
+          </div>
+          <div id="admin-booking-note" class="note" style="margin-top:1rem;">Creating a slot leaves the booking fields empty. Selecting a booked session lets you update its status and notes.</div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

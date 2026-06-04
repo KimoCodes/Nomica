@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Manager</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html" class="active">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Catalog</p>
+        <h3 id="product-sidebar-title" style="margin:.35rem 0;">No products yet</h3>
+        <p id="product-sidebar-copy" class="muted">Add products, bundles, or digital offers and manage them here.</p>
+        <a href="#" id="product-new-button" class="btn btn-primary btn-full" style="margin-top:.8rem;">New Product</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Commerce</p>
+          <h1>Store Manager</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search products, bundles, SKUs...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid4">
+        <article class="card stat">
+          <p class="mini">Active Products</p>
+          <h2>0</h2>
+          <span class="muted">Live products in the catalog</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Low Stock</p>
+          <h2>0</h2>
+          <span class="muted">Products below 5 units</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Draft Items</p>
+          <h2>0</h2>
+          <span class="muted">Not yet published</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Featured Offers</p>
+          <h2>0</h2>
+          <span class="muted">Marked as featured in the catalog</span>
+        </article>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card table-card">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Catalog</p>
+              <h2>Products & Bundles</h2>
+            </div>
+            <a href="#" id="product-add-button" class="btn btn-primary">Add Product</a>
+          </div>
+          <table class="table">
+            <thead>
+              <tr><th>Item</th><th>Price</th><th>Type</th><th>Stock</th><th>Status</th></tr>
+            </thead>
+            <tbody id="admin-products-body"></tbody>
+          </table>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Create / Edit</p>
+              <h2>Sellable Product Setup</h2>
+            </div>
+          </div>
+          <input type="hidden" id="admin-product-id">
+          <div class="form two">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Product Name</div>
+              <input id="admin-product-name" class="input" placeholder="Product or bundle name">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Price</div>
+              <input id="admin-product-price" class="input" placeholder="0">
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Category</div>
+              <select id="admin-product-category" class="select">
+                <option>Bundle</option>
+                <option>Physical</option>
+                <option>Digital</option>
+                <option>Service</option>
+              </select>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Inventory</div>
+              <input id="admin-product-inventory" class="input" placeholder="Leave blank for unlimited">
+            </div>
+          </div>
+          <div class="form" style="margin-top:.9rem;">
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Short Description</div>
+              <textarea id="admin-product-description" class="textarea" placeholder="Describe what the customer receives."></textarea>
+            </div>
+            <div>
+              <div class="mini" style="margin-bottom:.35rem;">Product Gallery</div>
+              <input id="admin-product-media-input" class="input" type="file" accept="image/*,video/*" multiple>
+              <div id="admin-product-media-preview" class="list" style="margin-top:.75rem;"></div>
+            </div>
+            <div class="form two">
+              <div>
+                <div class="mini" style="margin-bottom:.35rem;">Visibility</div>
+                <select id="admin-product-visibility" class="select">
+                  <option>Public on website</option>
+                  <option>Clients only</option>
+                  <option>Private link only</option>
+                </select>
+              </div>
+              <div>
+                <div class="mini" style="margin-bottom:.35rem;">Delivery Type</div>
+                <select id="admin-product-delivery" class="select">
+                  <option>Ship + email receipt</option>
+                  <option>Digital download</option>
+                  <option>Manual fulfillment</option>
+                </select>
+              </div>
+              <div>
+                <div class="mini" style="margin-bottom:.35rem;">Status</div>
+                <select id="admin-product-status" class="select">
+                  <option>Live</option>
+                  <option>Featured</option>
+                  <option>Draft</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="actions" style="margin-top:1rem;">
+            <a href="#" id="admin-product-save" class="btn btn-primary">Save Product</a>
+            <a href="#" id="admin-product-duplicate" class="btn btn-secondary">Duplicate Offer</a>
+          </div>
+          <div id="admin-product-note" class="note" style="margin-top:1rem;">Select a product to edit it, or add a new catalog item.</div>
+        </article>
+      </section>
+
+      <section class="grid2" style="margin-top:1rem;">
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Merchandising</p>
+              <h2>Homepage Sales Slots</h2>
+            </div>
+          </div>
+          <div id="admin-product-merchandising" class="list"></div>
+        </article>
+
+        <article class="card panel">
+          <div class="head">
+            <div>
+              <p class="eyebrow">Sales Rules</p>
+              <h2>Admin Selling Permissions</h2>
+            </div>
+          </div>
+          <div id="admin-product-rules" class="list"></div>
+        </article>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

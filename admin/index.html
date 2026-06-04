@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Owner Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">FitFunnel Pro <span class="role">Owner</span></div>
+      <nav class="nav">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="programs.html">Programs</a>
+        <a href="products.html">Store</a>
+        <a href="orders.html">Orders</a>
+        <a href="clients.html">Clients</a>
+        <a href="bookings.html">Bookings</a>
+        <a href="sales.html">Sales</a>
+        <a href="content.html">Content</a>
+        <a href="settings.html">Settings</a>
+      </nav>
+      <div class="sidebar-card">
+        <p class="mini">Business Snapshot</p>
+        <h3 id="dashboard-sidebar-title" style="margin:.35rem 0;">Owner overview</h3>
+        <p id="dashboard-sidebar-copy" class="muted">This area now pulls live numbers from your actual system data.</p>
+        <a href="products.html" class="btn btn-primary btn-full" style="margin-top:.8rem;">Manage Store</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Admin / Owner</p>
+          <h1>Owner Dashboard</h1>
+        </div>
+        <div class="actions">
+          <input class="search" type="text" placeholder="Search clients, orders, products...">
+          <a href="logout.html" class="btn btn-secondary">Logout</a>
+        </div>
+      </header>
+
+      <section class="grid4">
+        <article class="card stat">
+          <p class="mini">Monthly Revenue</p>
+          <h2>$0</h2>
+          <span class="muted">Combined revenue across all tracked orders</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Store Orders</p>
+          <h2>0</h2>
+          <span class="muted">Orders placed in the system</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Bookings</p>
+          <h2>0</h2>
+          <span class="muted">Saved sessions and open requests</span>
+        </article>
+        <article class="card stat">
+          <p class="mini">Active Clients</p>
+          <h2>0</h2>
+          <span class="muted">Clients with portal accounts</span>
+        </article>
+      </section>
+
+      <section class="content" style="margin-top:1rem;">
+        <div class="grid2">
+          <article class="card panel">
+            <div class="head">
+              <div>
+                <p class="eyebrow">Sales Overview</p>
+                <h2>Revenue Trend</h2>
+              </div>
+              <span id="dashboard-revenue-tag" class="tag green">Live</span>
+            </div>
+            <div class="chart">
+              <div id="dashboard-revenue-bars" class="bars"></div>
+            </div>
+          </article>
+
+          <article class="card panel">
+            <div class="head">
+              <div>
+                <p class="eyebrow">Owner Checklist</p>
+                <h2>Priority Actions</h2>
+              </div>
+            </div>
+            <div id="dashboard-priority-list" class="list"></div>
+          </article>
+
+          <article class="card panel">
+            <div class="head">
+              <div>
+                <p class="eyebrow">Recent Orders</p>
+                <h2>Latest Purchases</h2>
+              </div>
+              <a href="orders.html" class="btn btn-secondary">Open Orders</a>
+            </div>
+            <table class="table">
+              <thead>
+                <tr><th>Client</th><th>Offer</th><th>Amount</th><th>Status</th></tr>
+              </thead>
+              <tbody id="dashboard-orders-body"></tbody>
+            </table>
+          </article>
+
+          <article class="card panel">
+            <div class="head">
+              <div>
+                <p class="eyebrow">Quick Access</p>
+                <h2>Commerce Tools</h2>
+              </div>
+            </div>
+            <div class="list">
+              <a class="item" href="products.html">
+                <strong>Store Manager</strong>
+                <div class="muted">Create products, set stock, and feature best sellers</div>
+              </a>
+              <a class="item" href="orders.html">
+                <strong>Orders Queue</strong>
+                <div class="muted">Track payments, fulfillment, and delivery status</div>
+              </a>
+              <a class="item" href="sales.html">
+                <strong>Revenue Analytics</strong>
+                <div class="muted">Measure product, coaching, and bundle performance</div>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <div class="grid2">
+          <article class="card panel">
+            <div class="head">
+              <div>
+                <p class="eyebrow">Store Funnel</p>
+                <h2>Top Product Sources</h2>
+              </div>
+            </div>
+            <div id="dashboard-funnel-list" class="list"></div>
+          </article>
+
+          <article class="card panel">
+            <div class="head">
+              <div>
+                <p class="eyebrow">Today</p>
+                <h2>Delivery Schedule</h2>
+              </div>
+            </div>
+            <div id="dashboard-schedule-list" class="list"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
